@@ -1,0 +1,88 @@
+
+body {
+  background-color: black;
+  padding: 10px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+}
+h2 {
+  color: darkcyan
+}
+h3 {
+  color: cyan;
+}
+h4 {
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+}
+a {
+  color: white;
+  list-style-type: none;
+  text-align: center;
+}
+a:link {
+  color:white;
+}
+a:hover {
+  color: cyan;
+  font-size: 20px;
+}
+.header {
+  background-image: url(IMAGES/headerimg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 25px 15px;
+  margin-bottom: 40px;
+}
+p {
+  color: white
+}
+img {
+  float: none;
+}
+.container {
+  display:flex; 
+  flex-direction: column; }
+  @media (min-width: 700px) {   
+    .container {
+  display: grid;
+  grid-template-areas:
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
+  gap: 1px;
+  background-color: darkblue;
+  padding: 2px;}
+ 
+}
+.container div {
+  background-color: black;
+  padding: 10px;
+}
+.container div.menu {
+  grid-area: menu;
+  text-align: center;
+  padding: 40px;
+}
+.container div.content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 40px;
+}
+.item {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
